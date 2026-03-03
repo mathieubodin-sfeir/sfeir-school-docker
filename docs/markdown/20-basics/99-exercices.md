@@ -10,4 +10,4 @@ Use the Docker CLI to perform basics actions.
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**

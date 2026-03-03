@@ -11,4 +11,4 @@ Use the Docker CLI to create a docker image.
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**

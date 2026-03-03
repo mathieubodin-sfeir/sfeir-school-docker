@@ -2,11 +2,11 @@
 
 # Network
 
-## Default Network 
+## Default Network
 
 - Bridge : `docker run busybox`
   - Virtual network for docker application, isolated
-  - `docker0` interface 
+  - `docker0` interface
   - default
 - Host : `docker run --network host busybox`
   - host network, not isolated, can't bind same application on same port
@@ -20,7 +20,7 @@ Notes:
 Bridge no port binded
 host automatic bind
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -28,7 +28,7 @@ Speaker **Thibauld**
 
 # Network
 
-## Custom Network 
+## Custom Network
 
 ```sh
 docker network create –-driver [bridge|overlay] -–subnet [subnet] NETWORK
@@ -39,9 +39,9 @@ docker network create –-driver [bridge|overlay] -–subnet [subnet] NETWORK
 
 Notes:
 
-Do not use overlay for driver - require a zookeeper or a etcd etc 
+Do not use overlay for driver - require a zookeeper or a etcd etc
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -49,7 +49,7 @@ Speaker **Thibauld**
 
 # Network
 
-## Inspect Network 
+## Inspect Network
 
 ```bash [1,7|18,19,24]
 docker inspect [NETWORK|CONTAINER]
@@ -83,12 +83,12 @@ docker inspect [NETWORK|CONTAINER]
     }
 ]
 ```
- 
+
 Notes:
 
-Do not use overlay for driver - require a zookeeper or a etcd etc 
+Do not use overlay for driver - require a zookeeper or a etcd etc
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -109,7 +109,7 @@ SSH only accessible from vpn or internal
 Tomcat exposed to 0.0.0.0
 By default, linux kernels prevents regular users to bind to ports < 1024
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -123,12 +123,12 @@ Speaker **Thibauld**
 
 - On `docker create` or `docker run` commandes.
 - Must be on a free port
-- Can specify `tcp` or `upd` 
+- Can specify `tcp` or `upd`
 - Can specify the interface/ip to use
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -136,9 +136,9 @@ Speaker **Thibauld**
 
 ## DNS
 
-- Embded DNS under the hood 
+- Embded DNS under the hood
 - Can refer to IP or container name
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**

@@ -20,7 +20,7 @@ docker build --build-arg foo=some_value
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -38,7 +38,7 @@ FROM base:${CODE_VERSION}
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -64,7 +64,7 @@ Notes:
 
 We have to protect char such as space with backslash
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -93,7 +93,7 @@ COPY --chown=<user>:<group> <src> <dest>
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -109,7 +109,7 @@ RUN apt-get dist-upgrade -y
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -130,7 +130,7 @@ EXPOSE 80/udp
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -148,7 +148,7 @@ Notes:
 
 Volume created this way are managed by Docker and aren't named.
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -169,7 +169,7 @@ WORKDIR /opt
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -188,7 +188,7 @@ USER webserver:application
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -213,7 +213,7 @@ docker container run -e environment=”development” busybox
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -238,7 +238,7 @@ Notes:
 
 if no foreground process then the container stop
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -250,7 +250,7 @@ Speaker **Thibauld**
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -276,4 +276,4 @@ Notes:
 
 keep layer from last **FROM** only 
 
-Speaker **Thibauld**
+Speaker **Alexandre**

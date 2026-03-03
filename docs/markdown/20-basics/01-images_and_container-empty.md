@@ -10,6 +10,6 @@
 
 - ?
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**

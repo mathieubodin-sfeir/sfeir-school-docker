@@ -12,7 +12,7 @@
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -29,7 +29,7 @@ Speaker **Thibauld**
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -47,9 +47,9 @@ Speaker **Thibauld**
 
 Notes:
 
-A matter of second 
+A matter of seconds
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -63,9 +63,9 @@ Speaker **Thibauld**
 
 Notes:
 
-A matter of second 
+A matter of seconds
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -77,7 +77,7 @@ Speaker **Thibauld**
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -94,7 +94,7 @@ Speaker **Thibauld**
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -107,9 +107,9 @@ Speaker **Thibauld**
 
 Notes:
 
-smaller resource that can exists
+smaller resource that can exist
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -122,13 +122,14 @@ Speaker **Thibauld**
 
 Notes:
 
-Explain his role : 
+Explain his role :
+
 * update pod
 * scale
-* self healing 
+* self healing
 * ...
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -141,15 +142,14 @@ Speaker **Thibauld**
 
 * Declarative approach
 * Increase in speed of deployments
-* Reduce errors 
+* Reduce errors
 * Improve infrastructure consistency
 * Eliminate configuration drift
 <!-- .element: class="list-fragment" -->
 
-
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -157,7 +157,6 @@ Speaker **Thibauld**
 # Kubernetes
 
 ## YAML - pods
-
 
 ```yaml
 apiVersion: v1 # API Version de la resource
@@ -177,7 +176,7 @@ spec:
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -185,7 +184,6 @@ Speaker **Thibauld**
 # Kubernetes
 
 ## CLI - kubectl
-
 
 > `kubectl [commande] [TYPE] [NOM] [flags]`
 
@@ -198,7 +196,7 @@ Speaker **Thibauld**
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: class="with-code" -->
@@ -209,7 +207,7 @@ Speaker **Thibauld**
 
 > [Play with kubernetes](https://labs.play-with-k8s.com/)
 
-- create 3 instances. 1 master, 2 worker
+* create 3 instances. 1 master, 2 worker
 
 ```bash
 kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16
@@ -225,5 +223,4 @@ kubectl get nodes
 Notes:
 
 when nodes ready you should have a command to join cluster as node 
-Speaker **Thibauld**
-
+Speaker **Alexandre**

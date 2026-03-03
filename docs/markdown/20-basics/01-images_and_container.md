@@ -19,4 +19,4 @@ Notes:
 * Images can exist without containers
 * container needs to run an image to exist
 
-Speaker **Thibauld**
+Speaker **Alexandre**

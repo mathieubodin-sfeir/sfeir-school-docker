@@ -25,7 +25,7 @@ Notes:
 * Don’t bind to a specific UID
 * Make executables owned by root and not writable
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: -->
@@ -35,16 +35,17 @@ Speaker **Thibauld**
 ## Best practices - image size
 
 * Keep the images minimal
-  *  Excluding Build Tools with Multistage builds
-  *  Avoid multiple `RUN` stage and prefere use of `&&` 
-  *  Build image from [Alpine](https://hub.docker.com/_/alpine) or [Distroless](https://github.com/GoogleContainerTools/distroless) images
-  *  Prefere the use of **COPY** instead of **ADD**
+  
+  * Excluding Build Tools with Multistage builds
+  * Avoid multiple `RUN` stage and prefere use of `&&`
+  * Build image from [Alpine](https://hub.docker.com/_/alpine) or [Distroless](https://github.com/GoogleContainerTools/distroless) images
+  * Prefere the use of **COPY** instead of **ADD**
 
 Notes:
 
 Use COPY unless you really need the ADD functionality, like to add files from an URL or from a tar file. COPY is more predictable and less error prone.
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: -->
@@ -53,29 +54,30 @@ Speaker **Thibauld**
 
 ## Best practices - image size - example
 
-Use case: go app 
+Use case: go app
 
-- FROM `ubuntu` 
-  - ubuntu -> 636MB
-- FROM `golang`
-  - golang -> 744MB
-- FROM `alpine`
-  - alpine -> 426MB
-- FROM `golang:1.10-alpine3.8` 
-  - golang-alpine -> 288MB
-- FROM `golang:1.10-alpine3.8 AS multistage`
+* FROM `ubuntu`
+  * ubuntu -> 636MB
+* FROM `golang`
+  * golang -> 744MB
+* FROM `alpine`
+  * alpine -> 426MB
+* FROM `golang:1.10-alpine3.8`
+  * golang-alpine -> 288MB
+* FROM `golang:1.10-alpine3.8 AS multistage`
 <!-- .element: class="list-fragment" -->
-  - \<none\> -> 294MB
-  - prod -> 11.3MB
+  * \<none\> -> 294MB
+  * prod -> 11.3MB
 <!-- .element: class="list-fragment" -->
 
 Notes:
 
-`multistage` generate 2 images one used for build and the other juste use copied files 
-  - \<none\> -> 294MB
-  - prod -> 11.3MB
+`multistage` generate 2 images one used for build and the other juste use copied files
 
-eg: 
+* \<none\> -> 294MB
+* prod -> 11.3MB
+
+eg:
 
 ```dockerfile
 FROM golang:1.10-alpine3.8 AS multistage
@@ -90,12 +92,12 @@ EXPOSE 3000
 CMD ["/go/bin/api"]
 ```
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: -->
 
-## Best practices - usages 
+## Best practices - usages
 
 * Use trusted base images
 * Update your images frequently
@@ -108,7 +110,7 @@ Notes:
 
 `EXPOSE` is for doc only
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: -->
@@ -137,12 +139,12 @@ Notes:
 
 Cache optimisation
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 <!-- .slide: -->
 
-## Best practices - Misc 
+## Best practices - Misc
 
 * Use specific image tag
 * Add metadata labels
@@ -154,5 +156,5 @@ Speaker **Thibauld**
 
 Notes:
 
-`docker scan img` 
-Speaker **Thibauld**
+`docker scan img`
+Speaker **Alexandre**

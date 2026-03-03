@@ -10,4 +10,4 @@ Use the Docker CLI to create ans use a network.
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**

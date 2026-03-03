@@ -10,4 +10,4 @@ Create your first dockerfile using a python application: flask.
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**

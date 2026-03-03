@@ -11,6 +11,6 @@
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 Ask the group to present itself

@@ -1,12 +1,12 @@
 <!-- .slide: -->
 
-# What is Docker 
+# What is Docker
 
 ![center](./assets/images/10-introduction/docker.png)
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 <!-- .slide: -->
@@ -17,16 +17,17 @@ Speaker **Thibauld**
 
 ![center](./assets/images/10-introduction/logistique.png)
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 analogy with logistics:
 
 differents :
-* formats 
+
+* formats
 * transport
-* merchendise 
+* merchendise
 
 19 century, by hand by “dockers”
 
@@ -34,40 +35,41 @@ differents :
 
 <!-- .slide: -->
 
-# What is Docker 
+# What is Docker
 
 ## Logistics after 1900
 
 ![center](./assets/images/10-introduction/logistique.after.png)
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
-* Company owner wants to simplify the loading of merchendis
+* Company owner wants to simplify the loading of merchandise
 * Standard format :
-    - Immutability: no modification during the transport
-    - Protability: can be adapt to every transport
+
+  * Immutability: no modification during the transport
+  * Portability: can be adapt to every transport
 
 ##--##
 
 <!-- .slide: -->
 
-# What is Docker 
+# What is Docker
 
 ## IT world
 
 ![center](./assets/images/10-introduction/logistique.docker.png)
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
 <!-- .slide: -->
 
-# What is Docker 
+# What is Docker
 
 ## What's inside
 
@@ -82,17 +84,17 @@ Speaker **Thibauld**
 * [jenkins](https://registry.hub.docker.com/_/jenkins/)
 * and more
 
-Notes: 
+Notes:
 
 A lot of runtimes
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
 <!-- .slide: -->
 
-# What is Docker 
+# What is Docker
 
 ## The goal of Docker
 
@@ -101,15 +103,15 @@ Share an application
 * With all dependencies
 * Standardized
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
 <!-- .slide: -->
 
-# What is Docker 
+# What is Docker
 
 ## Origin
 
@@ -118,6 +120,6 @@ Speaker **Thibauld**
 * Open source
 * 1st version : 13 mars 2013
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**

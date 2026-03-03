@@ -10,16 +10,16 @@
 
 ![](./assets/images/30-images-containers/docker_engine.png)
 
-Notes: 
+Notes:
 
 Docker PRO :
 
 - more efficient resources sharing
-- easier env manager 
+- easier env manager
 
 VMs PRO :
 
 - Isolation (no connection between host and the vm)
 - materiel access easier
 
-Speaker **Thibauld**
+Speaker **Mathieu**

@@ -26,7 +26,7 @@ CMD server.js
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -34,8 +34,8 @@ Speaker **Thibauld**
 
 ## Lifecycle
 
-- Every instruction create a new layer 
-- Reuse of existing features 
+- Every instruction create a new layer
+- Reuse of existing features
   - Run of a container
   - Execution of an instruction (trigger the **Copy-On-Write**)
   - Commit of the container state to create a transitive images
@@ -43,13 +43,13 @@ Speaker **Thibauld**
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
 # Dockerfile
 
-## Build output example 
+## Build output example
 
 ```[1-3|5-8|10-13|15-19|21-22]
 Sending build context to Docker daemon  2.048kB
@@ -78,7 +78,7 @@ Successfully tagged test-arg:latest
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -89,6 +89,7 @@ Speaker **Thibauld**
 Docker use a cache to be more performant unless you use `--no-cache=true` option.
 
 Docker may invalid the cache in some case:
+
 - Comparison between the child image and the parent image
 - `ADD` and `COPY` instruction - use of the checksum
 - Commit of a new transitive image
@@ -99,4 +100,4 @@ Notes:
 
 Once the cache is invalidated, all subsequent Dockerfile commands generate new images and the cache is not used.
 
-Speaker **Thibauld**
+Speaker **Alexandre**

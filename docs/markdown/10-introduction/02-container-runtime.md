@@ -1,18 +1,18 @@
 <!-- .slide: -->
 
-# Container Runtimes 
+# Container Runtimes
 
 > Runtimes are responsible of creating and running containers.
 
-Notes: 
+Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
 <!-- .slide: -->
 
-# Container Runtimes 
+# Container Runtimes
 
 * Docker
 * Podman
@@ -22,26 +22,28 @@ Speaker **Thibauld**
 
 <!-- .element: class="list-fragment" -->
 
-Notes: 
+Notes:
 
-Issue : 
+Issue :
 
 Docker use `containerd` that use itself `runc`.
 
 Docker utilise donc containerd qui va lui même utiliser runc
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--## 
 
 <!-- .slide: -->
 
-# Container Runtimes 
+# Container Runtimes
 
 * Runtimes Low-Level, run container following the [Open Container Initiative](https://opencontainers.org/) format
 * Runtimes High-Level,use Low-Level but implement feature like image management and APIs on top
 
-Notes: 
+Notes:
 
 Low-Level: Execute container as OCI container
 High-Level: More abstractions layer like API, push feature, pull feature etc.
+
+Speaker **Mathieu**

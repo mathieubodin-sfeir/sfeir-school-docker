@@ -22,7 +22,7 @@ Notes:
 Version is depracated but still present to maintain backwards compatibility
 It follow the [Docker Compose specification](https://docs.docker.com/compose/compose-file/)
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
@@ -42,7 +42,7 @@ services:
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
@@ -62,7 +62,7 @@ services:
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
@@ -83,8 +83,7 @@ services:
 
 Notes:
 
-Speaker **Thibauld**
-
+Speaker **Mathieu**
 
 ##--##
 
@@ -112,7 +111,7 @@ services:
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 <!-- .slide: class="with-code"-->
@@ -146,7 +145,7 @@ networks:
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 <!-- .slide: class="with-code"-->
@@ -177,7 +176,7 @@ volumes:
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 <!-- .slide: class="with-code"-->
@@ -203,7 +202,7 @@ Notes:
 
 No wait at all - if we want to wait utile load we should use `command` with custom sh script
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 <!-- .slide: class="with-code"-->
@@ -241,14 +240,12 @@ Notes:
 
 No wait at all - if we want to wait utile load we should use `command` with custom sh script
 
-order : 
+order :
+
 1. Compose file
 2. Shell environment variables
 3. Environment file
 4. Dockerfile
 5. Variable not defined
 
-Speaker **Thibauld**
-
-
-
+Speaker **Mathieu**

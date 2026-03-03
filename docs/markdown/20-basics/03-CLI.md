@@ -13,7 +13,7 @@ Usage: docker [OPTIONS] COMMAND [ARG...]
 
 Notes: 
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -31,7 +31,7 @@ Speaker **Thibauld**
 
 Notes: 
 
-Speaker **Thibauld**
+Speaker **Alexandre**
 
 ##--##
 
@@ -53,4 +53,4 @@ Speaker **Thibauld**
 
 Notes: 
 
-Speaker **Thibauld**
+Speaker **Alexandre**

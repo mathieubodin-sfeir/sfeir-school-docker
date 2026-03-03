@@ -9,10 +9,10 @@
 - Private registry eg. [JFROG ARTIFACTORY](https://jfrog.com/fr/artifactory/), [Google Artifact Registry](https://cloud.google.com/artifact-registry)
 <!-- .element: class="list-fragment" -->
 
-Notes: 
+Notes:
 
-* programming metaphor: if an image is a class, then a container is an instance of a class
-* Images can exist without containers
-* container needs to run an image to exist
+- programming metaphor: if an image is a class, then a container is an instance of a class
+- Images can exist without containers
+- container needs to run an image to exist
 
-Speaker **Thibauld**
+Speaker **Alexandre**

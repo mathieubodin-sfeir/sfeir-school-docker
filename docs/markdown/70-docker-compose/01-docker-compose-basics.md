@@ -14,12 +14,13 @@
 Notes:
 
 Think of docker-compose as :
+
 - an automated multi-container workflow
 - a tool for development, testing, CI workflows, and staging environments
 
-V2 - V3 available & DockercomposeV2 CLI 
+V2 - V3 available & DockercomposeV2 CLI
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
@@ -27,18 +28,13 @@ Speaker **Thibauld**
 
 ## CLI
 
-* `docker-compose up  -d` - run the container stack (detach mode)
-
-* `docker-compose ps` -  check stack status
-
-* `docker-compose logs` -  print stack logs 
-
-* `docker-compose stop` -  stop a stack
-
-* `docker-compose down` -  remove stack
-
-* `docker-compose config` - check compose file
+- `docker-compose up  -d` - run the container stack (detach mode)
+- `docker-compose ps` -  check stack status
+- `docker-compose logs` -  print stack logs
+- `docker-compose stop` -  stop a stack
+- `docker-compose down` -  remove stack
+- `docker-compose config` - check compose file
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**

@@ -36,7 +36,7 @@ ENTRYPOINT python /app/app.py
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##==##
 
@@ -50,7 +50,7 @@ Speaker **Thibauld**
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
@@ -72,7 +72,7 @@ Enterprise : use the same base image to  optimize disk space
 
 Cache
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
@@ -96,7 +96,7 @@ Manifests:
 - stored into the registry
 - redirect using the docker daemon
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 
 ##--##
@@ -124,5 +124,5 @@ registry.sfeir.com:9000/taiebm/cordova:5.0-test
 
 Notes: 
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 

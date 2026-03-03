@@ -6,7 +6,7 @@
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
 
 ##--##
 
@@ -21,4 +21,4 @@ https://bit.ly/sfeir-xxx <!-- .element: class="center" -->
 
 Notes:
 
-Speaker **Thibauld**
+Speaker **Mathieu**
