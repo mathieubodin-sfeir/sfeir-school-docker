@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+    "name": "SfeirSchoolDocker",
+    "image": "mcr.microsoft.com/devcontainers/base:trixie",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts",
+            "nodeGypDependencies": true,
+            "installYarnUsingApt": true,
+            "nvmInstallPath": "/usr/local/share/nvm",
+            "nvmVersion": "latest",
+            "yarnVersion": "latest"
+        },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "version": "latest",
+            "moby": false,
+            "installDockerBuildx": true,
+            "installDockerComposeSwitch": false,
+            "dockerDashComposeVersion": "v2",
+            "mobyBuildxVersion": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "EditorConfig.EditorConfig",
+                "DavidAnson.vscode-markdownlint"
+            ]
+        }
+    }    
+}
