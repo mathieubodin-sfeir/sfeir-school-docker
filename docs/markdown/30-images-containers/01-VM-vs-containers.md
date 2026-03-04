@@ -15,11 +15,11 @@ Notes:
 Docker PRO :
 
 - more efficient resources sharing
-- easier env manager
+- easier environment management
 
 VMs PRO :
 
 - Isolation (no connection between host and the vm)
-- materiel access easier
+- easier hardware access
 
 Speaker **Mathieu**

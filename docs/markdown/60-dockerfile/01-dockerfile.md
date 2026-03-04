@@ -35,11 +35,10 @@ Speaker **Alexandre**
 ## Lifecycle
 
 - Every instruction create a new layer
-- Reuse of existing features
+- Reuse of existing layers
   - Run of a container
   - Execution of an instruction (trigger the **Copy-On-Write**)
-  - Commit of the container state to create a transitive images
-  - Remove of the intermediate container
+  - Commit of the container state to create an intermediate image
 
 Notes:
 
@@ -92,7 +91,7 @@ Docker may invalid the cache in some case:
 
 - Comparison between the child image and the parent image
 - `ADD` and `COPY` instruction - use of the checksum
-- Commit of a new transitive image
+- Commit of a new intermediate image
 
 Cache check doesn't apply on internal file of the container.
 

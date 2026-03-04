@@ -6,8 +6,8 @@ Use case :
 
 5 containers.
 
-- Back end container (worker eg Java)
-- 2 différents databases
+- Back end container (worker, e.g. Java)
+- 2 different databases
   - High throughput database (eg. Redis / Apache Cassandra)
   - Relational database (eg. myqsl / postgresql)
 - 2 applications
@@ -30,6 +30,7 @@ Think of docker-compose as :
 Speaker **Mathieu**
 
 ##==##
+
 <!-- .slide: class="with-code" class="two-column" -->
 
 # Docker compose
@@ -41,6 +42,7 @@ Speaker **Mathieu**
 - docker run -d --name=monitoring monitoring
 
 `docker-compose up`
+
 <!-- .element: class="credits" -->
 
 ##--##
@@ -49,16 +51,16 @@ Speaker **Mathieu**
 
 ```yaml
 services:
-    nosql_db:
-        image: "redis:alpine“"
-    sql_db:
-        image: "postgres"
-    worker:
-        image: "registry/my-worker"
-    camera:
-        image: "camera-app"
-    monitoring:
-        image: "monitoring"
+  nosql_db:
+    image: 'redis:alpine'
+  sql_db:
+    image: 'postgres'
+  worker:
+    image: 'registry/my-worker'
+  camera:
+    image: 'camera-app'
+  monitoring:
+    image: 'monitoring'
 ```
 
 Notes:

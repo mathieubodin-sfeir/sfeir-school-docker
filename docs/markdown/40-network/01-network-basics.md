@@ -11,9 +11,9 @@
 - Host : `docker run --network host busybox`
   - host network, not isolated, can't bind same application on same port
 - None
-<!-- .element: class="list-fragment" -->
-  - Not attachd to any network, isolated
-<!-- .element: class="list-fragment" -->
+  <!-- .element: class="list-fragment" -->
+  - Not attached to any network, isolated
+  <!-- .element: class="list-fragment" -->
 
 Notes:
 
@@ -97,12 +97,12 @@ Speaker **Alexandre**
 ## Port
 
 - Not accessible by default
-- 1 : 1 assocation
+- 1:1 association
 - Access container on **bridge** network
 - Bind any port from the **container** to any free port on **host**
 - Can bind port on specifics interfaces/IP
 
-Notes: 
+Notes:
 
 Use case example : “bastion”
 SSH only accessible from vpn or internal
@@ -121,9 +121,9 @@ Speaker **Alexandre**
 -p HOST_PORT:CONTAINER_PORT
 ```
 
-- On `docker create` or `docker run` commandes.
+- On `docker create` or `docker run` commands.
 - Must be on a free port
-- Can specify `tcp` or `upd`
+- Can specify `tcp` or `udp`
 - Can specify the interface/ip to use
 
 Notes:
@@ -136,7 +136,7 @@ Speaker **Alexandre**
 
 ## DNS
 
-- Embded DNS under the hood
+- Embedded DNS under the hood
 - Can refer to IP or container name
 
 Notes:

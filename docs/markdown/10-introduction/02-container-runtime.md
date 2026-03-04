@@ -14,11 +14,11 @@ Speaker **Mathieu**
 
 # Container Runtimes
 
-* Docker
-* Podman
-* Containerd
-* Cri-o
-* And more
+- Docker
+- Podman
+- Containerd
+- Cri-o
+- And more
 
 <!-- .element: class="list-fragment" -->
 
@@ -26,20 +26,18 @@ Notes:
 
 Issue :
 
-Docker use `containerd` that use itself `runc`.
-
-Docker utilise donc containerd qui va lui même utiliser runc
+Docker uses `containerd`, which itself uses `runc`.
 
 Speaker **Mathieu**
 
-##--## 
+##--##
 
 <!-- .slide: -->
 
 # Container Runtimes
 
-* Runtimes Low-Level, run container following the [Open Container Initiative](https://opencontainers.org/) format
-* Runtimes High-Level,use Low-Level but implement feature like image management and APIs on top
+- Low-level runtimes run containers following the [Open Container Initiative](https://opencontainers.org/) specification
+- High-level runtimes use low-level runtimes but add features like image management and APIs on top
 
 Notes:
 

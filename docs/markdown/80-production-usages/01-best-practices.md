@@ -4,42 +4,42 @@
 
 ## Best practices - privileges
 
-* Rootless containers
-  * **USER** instruction exists
-  * Provide appropriate permissions
-<!-- .element: class="list-fragment" -->
+- Rootless containers
+  - **USER** instruction exists
+  - Provide appropriate permissions
+  <!-- .element: class="list-fragment" -->
 
-* Don’t bind to a specific UID
-  * Don't make it a requirement eg. use **`/tmp`** to writte on container
-  * Some runtimes use random UIDs when running containers
-  * Specific UID requires adjusting the permissions of any bind mount
-<!-- .element: class="list-fragment" -->
+- Don’t bind to a specific UID
+  - Don't make it a requirement eg. use **`/tmp`** to write to the container
+  - Some runtimes use random UIDs when running containers
+  - Specific UID requires adjusting the permissions of any bind mount
+  <!-- .element: class="list-fragment" -->
 
-* Make executables owned by root and not writable
-  * The app user only needs execution permissions on the file, not ownership
+- Make executables owned by root and not writable
+  - The app user only needs execution permissions on the file, not ownership
     <!-- .element: class="list-fragment" -->
 
 Notes:
 
-* Rootless containers 
-* Don’t bind to a specific UID
-* Make executables owned by root and not writable
+- Rootless containers
+- Don’t bind to a specific UID
+- Make executables owned by root and not writable
 
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: -->
 
 # Production environment
 
 ## Best practices - image size
 
-* Keep the images minimal
-  
-  * Excluding Build Tools with Multistage builds
-  * Avoid multiple `RUN` stage and prefere use of `&&`
-  * Build image from [Alpine](https://hub.docker.com/_/alpine), [Distroless](https://github.com/GoogleContainerTools/distroless), or even [scratch](https://hub.docker.com/_/scratch) (empty base image, for statically compiled binaries)
-  * Prefere the use of **COPY** instead of **ADD**
+- Keep the images minimal
+  - Excluding Build Tools with Multistage builds
+  - Avoid multiple `RUN` stages and prefer using `&&`
+  - Build image from [Alpine](https://hub.docker.com/_/alpine), [Distroless](https://github.com/GoogleContainerTools/distroless), or even [scratch](https://hub.docker.com/_/scratch) (empty base image, for statically compiled binaries)
+  - Prefer **COPY** over **ADD**
 
 Notes:
 
@@ -48,6 +48,7 @@ Use COPY unless you really need the ADD functionality, like to add files from an
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: -->
 
 # Production environment
@@ -56,26 +57,26 @@ Speaker **Alexandre**
 
 Use case: go app
 
-* FROM `ubuntu`
-  * ubuntu -> 636MB
-* FROM `golang`
-  * golang -> 744MB
-* FROM `alpine`
-  * alpine -> 426MB
-* FROM `golang:1.10-alpine3.8`
-  * golang-alpine -> 288MB
-* FROM `golang:1.10-alpine3.8 AS multistage`
-<!-- .element: class="list-fragment" -->
-  * \<none\> -> 294MB
-  * prod -> 11.3MB
-<!-- .element: class="list-fragment" -->
+- FROM `ubuntu`
+  - ubuntu -> 636MB
+- FROM `golang`
+  - golang -> 744MB
+- FROM `alpine`
+  - alpine -> 426MB
+- FROM `golang:1.10-alpine3.8`
+  - golang-alpine -> 288MB
+- FROM `golang:1.10-alpine3.8 AS multistage`
+  <!-- .element: class="list-fragment" -->
+  - \<none\> -> 294MB
+  - prod -> 11.3MB
+  <!-- .element: class="list-fragment" -->
 
 Notes:
 
-`multistage` generate 2 images one used for build and the other juste use copied files
+`multistage` generate 2 images one used for build and the other just uses the copied files
 
-* \<none\> -> 294MB
-* prod -> 11.3MB
+- \<none\> -> 294MB
+- prod -> 11.3MB
 
 eg:
 
@@ -95,15 +96,16 @@ CMD ["/go/bin/api"]
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: -->
 
 ## Best practices - usages
 
-* Use trusted base images
-* Update your images frequently
-* Expose only mandatory ports
-* Build context : prefere `docker build -t myimage files/` to `docker build -t myimage .`
-* Use a .dockerignore file
+- Use trusted base images
+- Update your images frequently
+- Expose only mandatory ports
+- Build context : prefere `docker build -t myimage files/` to `docker build -t myimage .`
+- Use a .dockerignore file
 <!-- .element: class="list-fragment" -->
 
 Notes:
@@ -113,6 +115,7 @@ Notes:
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: -->
 
 ## Best practices - layer order
@@ -142,16 +145,17 @@ Cache optimisation
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: -->
 
 ## Best practices - Misc
 
-* Use specific image tag
-* Add metadata labels
-* Use Linter
-* Use a scanner to detect Security Vulnerabilities
-* Create Stateless, Reproducible Containers
-* SAY NO TO `LATEST` TAG
+- Use specific image tag
+- Add metadata labels
+- Use Linter
+- Use a scanner to detect Security Vulnerabilities
+- Create Stateless, Reproducible Containers
+- SAY NO TO `LATEST` TAG
 <!-- .element: class="list-fragment" -->
 
 Notes:

@@ -9,9 +9,10 @@ Notes:
 Speaker **Mathieu**
 
 ##--##
+
 <!-- .slide: -->
 
-# What is Docker 
+# What is Docker
 
 ## Logistics
 
@@ -23,11 +24,11 @@ Speaker **Mathieu**
 
 analogy with logistics:
 
-differents :
+different:
 
-* formats
-* transport
-* merchendise
+- formats
+- transport
+- merchandise
 
 19 century, by hand by “dockers”
 
@@ -45,11 +46,10 @@ Notes:
 
 Speaker **Mathieu**
 
-* Company owner wants to simplify the loading of merchandise
-* Standard format :
-
-  * Immutability: no modification during the transport
-  * Portability: can be adapt to every transport
+- Company owner wants to simplify the loading of merchandise
+- Standard format :
+  - Immutability: no modification during the transport
+  - Portability: can be adapt to every transport
 
 ##--##
 
@@ -73,16 +73,16 @@ Speaker **Mathieu**
 
 ## What's inside
 
-* [Ubuntu](https://registry.hub.docker.com/_/ubuntu/)
-* [nginx](https://registry.hub.docker.com/_/nginx/)
-* [redis](https://registry.hub.docker.com/_/redis/)
-* [node](https://registry.hub.docker.com/_/node/)
-* [postgres](https://registry.hub.docker.com/_/postgres/)
-* [mysql](https://registry.hub.docker.com/_/mysql/)
-* [mongo](https://registry.hub.docker.com/_/mongo/)
-* [debian](https://registry.hub.docker.com/_/debian/)
-* [jenkins](https://registry.hub.docker.com/_/jenkins/)
-* and more
+- [Ubuntu](https://registry.hub.docker.com/_/ubuntu/)
+- [nginx](https://registry.hub.docker.com/_/nginx/)
+- [redis](https://registry.hub.docker.com/_/redis/)
+- [node](https://registry.hub.docker.com/_/node/)
+- [postgres](https://registry.hub.docker.com/_/postgres/)
+- [mysql](https://registry.hub.docker.com/_/mysql/)
+- [mongo](https://registry.hub.docker.com/_/mongo/)
+- [debian](https://registry.hub.docker.com/_/debian/)
+- [jenkins](https://registry.hub.docker.com/_/jenkins/)
+- and more
 
 Notes:
 
@@ -100,8 +100,8 @@ Speaker **Mathieu**
 
 Share an application
 
-* With all dependencies
-* Standardized
+- With all dependencies
+- Standardized
 
 Notes:
 
@@ -115,10 +115,10 @@ Speaker **Mathieu**
 
 ## Origin
 
-* Solomon Hykes
-* Written in Go
-* Open source
-* 1st version : 13 mars 2013
+- Solomon Hykes
+- Written in Go
+- Open source
+- 1st version: March 13, 2013
 
 Notes:
 

@@ -9,7 +9,7 @@
 - Descriptive approach of the applicative full stack
 - Avoid redundancy of commands
 - Yaml file
-- Infa as code
+- Infra as code
 
 Notes:
 
@@ -28,7 +28,7 @@ Speaker **Mathieu**
 
 ## CLI
 
-- `docker-compose up  -d` - run the container stack (detach mode)
+- `docker-compose up -d` - run the container stack (detach mode)
 - `docker-compose ps` - check stack status
 - `docker-compose logs` - print stack logs
 - `docker-compose stop` - stop a stack
