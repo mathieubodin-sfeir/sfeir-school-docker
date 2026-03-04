@@ -38,7 +38,7 @@ Speaker **Alexandre**
   
   * Excluding Build Tools with Multistage builds
   * Avoid multiple `RUN` stage and prefere use of `&&`
-  * Build image from [Alpine](https://hub.docker.com/_/alpine) or [Distroless](https://github.com/GoogleContainerTools/distroless) images
+  * Build image from [Alpine](https://hub.docker.com/_/alpine), [Distroless](https://github.com/GoogleContainerTools/distroless), or even [scratch](https://hub.docker.com/_/scratch) (empty base image, for statically compiled binaries)
   * Prefere the use of **COPY** instead of **ADD**
 
 Notes:

@@ -1,8 +1,8 @@
 <!-- .slide: -->
 
-# Docker registry
+# Image registry
 
-> A Docker registry is a storage and distribution system for named Docker images. The same image might have multiple different versions, identified by their tags.
+> An image registry is a storage and distribution system for named container images. The same image might have multiple different versions, identified by their tags.
 
 - Images Stored in it
 - Public registry eg. [Docker Hub](https://hub.docker.com/search?q=)

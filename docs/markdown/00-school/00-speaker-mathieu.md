@@ -11,9 +11,11 @@
 <h2>Mathieu <span>BODIN</span></h2>
 
 ### bodin.m@sfeir.com
+
 <!-- .element: class="icon-mail icon-first" -->
 
 ### Application Architect, Kubernetes Trainer (LinuxFoundation)
+
 <!-- .element: class="icon-rule icon-second" -->
 
 Notes:
