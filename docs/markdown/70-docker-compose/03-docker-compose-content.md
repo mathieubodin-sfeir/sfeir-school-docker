@@ -5,7 +5,6 @@
 ## Service
 
 ```yaml
-version: '3.9' # Deprecated
 services:
   frontend: ...
   backend: ...
@@ -16,8 +15,8 @@ services:
 
 Notes:
 
-Version is depracated but still present to maintain backwards compatibility
-It follow the [Docker Compose specification](https://docs.docker.com/compose/compose-file/)
+The `version` field is obsolete and ignored by Docker Compose V2+. It should be omitted from new files. Legacy files that still have it will work but may generate a warning.
+It follows the [Docker Compose specification](https://docs.docker.com/compose/compose-file/)
 
 Speaker **Mathieu**
 
@@ -226,7 +225,7 @@ services:
 
 <!-- .element: class="max-height" -->
 
-- Using an **env file** (only work with `docker-compose up`) with `--env-file`
+- Using an **env file** (only work with `docker compose up`) with `--env-file`
 
 ```
 POSTGRES_VERSION=alpine
@@ -238,7 +237,7 @@ USER=foo
 ```shell
 export POSTGRES_VERSION=alpine
 export USER=foo
-docker-compose up
+docker compose up
 ```
 
 Notes:

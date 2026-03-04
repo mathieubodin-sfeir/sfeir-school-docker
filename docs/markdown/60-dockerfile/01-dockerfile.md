@@ -85,7 +85,7 @@ Speaker **Alexandre**
 
 ## Lifecycle
 
-Docker use a cache to be more performant unless you use `--no-cache=true` option.
+Docker uses a cache to be more performant unless you use the `--no-cache` option.
 
 Docker may invalid the cache in some case:
 

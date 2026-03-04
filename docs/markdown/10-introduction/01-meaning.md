@@ -73,15 +73,15 @@ Speaker **Mathieu**
 
 ## What's inside
 
-- [Ubuntu](https://registry.hub.docker.com/_/ubuntu/)
-- [nginx](https://registry.hub.docker.com/_/nginx/)
-- [redis](https://registry.hub.docker.com/_/redis/)
-- [node](https://registry.hub.docker.com/_/node/)
-- [postgres](https://registry.hub.docker.com/_/postgres/)
-- [mysql](https://registry.hub.docker.com/_/mysql/)
-- [mongo](https://registry.hub.docker.com/_/mongo/)
-- [debian](https://registry.hub.docker.com/_/debian/)
-- [jenkins](https://registry.hub.docker.com/_/jenkins/)
+- [Ubuntu](https://hub.docker.com/_/ubuntu/)
+- [nginx](https://hub.docker.com/_/nginx/)
+- [redis](https://hub.docker.com/_/redis/)
+- [node](https://hub.docker.com/_/node/)
+- [postgres](https://hub.docker.com/_/postgres/)
+- [mysql](https://hub.docker.com/_/mysql/)
+- [mongo](https://hub.docker.com/_/mongo/)
+- [debian](https://hub.docker.com/_/debian/)
+- [jenkins](https://hub.docker.com/_/jenkins/)
 - and more
 
 Notes:

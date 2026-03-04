@@ -22,7 +22,7 @@ Use case :
 
 Notes:
 
-Think of docker-compose as :
+Think of Docker Compose as:
 
 - An automated multi-container workflow
 - A tool for development, testing, CI workflows, and staging environments
@@ -41,13 +41,13 @@ Speaker **Mathieu**
 - docker run -d --name=camera camera
 - docker run -d --name=monitoring monitoring
 
-`docker-compose up`
+`docker compose up`
 
 <!-- .element: class="credits" -->
 
 ##--##
 
-# docker-compose.yaml
+# compose.yaml
 
 ```yaml
 services:

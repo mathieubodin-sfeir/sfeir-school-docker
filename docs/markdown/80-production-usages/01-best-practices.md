@@ -104,7 +104,7 @@ Speaker **Alexandre**
 - Use trusted base images
 - Update your images frequently
 - Expose only mandatory ports
-- Build context : prefere `docker build -t myimage files/` to `docker build -t myimage .`
+- Build context: prefer `docker build -t myimage files/` to `docker build -t myimage .`
 - Use a .dockerignore file
 <!-- .element: class="list-fragment" -->
 
@@ -160,5 +160,6 @@ Speaker **Alexandre**
 
 Notes:
 
-`docker scan img`
+Use `docker scout quickview img` (Docker-native), or third-party tools like Trivy, Snyk, or Grype to scan for vulnerabilities.
+
 Speaker **Alexandre**
