@@ -5,10 +5,11 @@
 ### Tips
 
 - Use `docker container inspect ...`
+- `couchdb:3` requires credentials at startup — add `-e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password`
 
 ### Existing volumes
 
-1. run `docker container run --name couchdb -d -p 5984:5984 couchdb:3`
+1. run `docker container run --name couchdb -d -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password couchdb:3`
 2. Check existing volumes
    1. Why there is already a volume ?
 3. Identify the volume that is used by `couchdb`

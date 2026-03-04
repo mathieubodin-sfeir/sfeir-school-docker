@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-docker container run --name couchdb1 -d -p 5984:5984 couchdb:3
+docker container run --name couchdb1 -d -p 5984:5984 \
+  -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password \
+  couchdb:3
 
 curl localhost:5984
 

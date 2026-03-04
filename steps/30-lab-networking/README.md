@@ -5,11 +5,12 @@
 ### Tips
 
 - Port must be higher than 1024
+- `couchdb:3` requires credentials at startup — add `-e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password`
 
 ### Expose port
 
 1. Pull `couchdb:3`
-2. Run couchdb, name it `couchdb1` and expose the port `5984` (detached)
+2. Run couchdb, name it `couchdb1` and expose the port `5984` (detached), with credentials
 3. Check the CouchDB version on `http://localhost:5984`
 4. Run temporary busybox container
 5. Call `localhost:5984` with `wget` from busybox container

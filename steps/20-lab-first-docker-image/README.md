@@ -8,14 +8,14 @@
 
 ### Make our image
 
-1. Run `nginx` image detached with param `-p 80:80` named `mynginx1`
-2. Check that the nginx page (localhost:80)
+1. Run `nginx` image detached with param `-p 8080:80` named `mynginx1`
+2. Check that the nginx page (localhost:8080)
 3. Run a shell without stopping the Container
 4. Update the file `/usr/share/nginx/html/index.html` in the container
-5. Check that the nginx page has been updated (localhost:80)
+5. Check that the nginx page has been updated (localhost:8080)
 6. Create an image named `my_awesome_image`
 7. Run the new image
-8. Check that the modifications are still present (localhost:80)
+8. Check that the modifications are still present (localhost:8080)
 9. Check the layer with the `docker history` command
 
 ### Tag our image

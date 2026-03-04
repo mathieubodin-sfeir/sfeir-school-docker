@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 
-docker run --name mynginx1 -p 80:80 -d nginx
+docker run --name mynginx1 -p 8080:80 -d nginx
 
-curl localhost:80
+curl localhost:8080
 
 docker exec -it mynginx1 bash
 
 # > echo "<p>Louis was here</p>" >> /usr/share/nginx/html/index.html
 # > exit
 
-curl localhost:80
+curl localhost:8080
 
 docker container commit mynginx1 my_awesome_image
 
-docker run --name my_awesome_image -p 81:80 -d my_awesome_image
+docker run --name my_awesome_image -p 8081:80 -d my_awesome_image
 
-curl localhost:81
+curl localhost:8081
 
 
 docker history my_awesome_image:latest 

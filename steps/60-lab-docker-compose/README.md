@@ -30,6 +30,6 @@ Create a `compose.yaml` for a Flask application (Python) that uses Redis.
 
 ### set up the stack
 
-1. Use the `docker compose up -d` command
+1. Use the `docker compose up --build -d` command
 2. curl the `localhost:9092`
    1. Check that the `number` of visit is incremented at each call
