@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-docker-compose build
-# Build the images using the `build` from docker compose
-
-docker-compose up -d
+docker compose up --build -d
 
 curl localhost:9092
 # This is a sfeir school about Docker ! 

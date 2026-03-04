@@ -8,9 +8,9 @@
 
 ### Expose port
 
-1. Pull `couchdb:2.1`
-2. Run couchdb, name it `couchedb1` and expose the port `5984` (detached)
-3. Check the couchedb version on `http://localhost:5984`
+1. Pull `couchdb:3`
+2. Run couchdb, name it `couchdb1` and expose the port `5984` (detached)
+3. Check the CouchDB version on `http://localhost:5984`
 4. Run temporary busybox container
 5. Call `localhost:5984` with `wget` from busybox container
    1. What happened ?

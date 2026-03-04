@@ -11,14 +11,14 @@ docker exec -it mynginx1 bash
 
 curl localhost:80
 
-docker container commit mynginx1 my_awsome_image
+docker container commit mynginx1 my_awesome_image
 
-docker run --name my_awsome_image -p 81:80 -d my_awsome_image
+docker run --name my_awesome_image -p 81:80 -d my_awesome_image
 
 curl localhost:81
 
 
-docker history my_awsome_image:latest 
+docker history my_awesome_image:latest 
 
 # IMAGE          CREATED          CREATED BY                                      SIZE      COMMENT
 # c996944804ee   13 minutes ago   nginx -g daemon off;                            1.8kB     
@@ -56,10 +56,11 @@ docker history nginx:latest
 # <missing>      6 days ago   /bin/sh -c #(nop)  CMD ["bash"]                 0B        
 # <missing>      6 days ago   /bin/sh -c #(nop) ADD file:d08e242792caa7f84…   80.5MB 
 
-docker tag my_awsome_image:latest <dockerHubId>/my_awsome_image:1.0
+docker tag my_awesome_image:latest my_awesome_image:1.0
 
 docker images
 
-docker login
-
-docker push <dockerHubId>/my_awsome_image:1.0
+# Optional: push to Docker Hub (requires an account)
+# docker tag my_awesome_image:1.0 <dockerHubId>/my_awesome_image:1.0
+# docker login
+# docker push <dockerHubId>/my_awesome_image:1.0

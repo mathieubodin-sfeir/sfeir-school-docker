@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-docker container run --name couchdb1 -d -p 5984:5984 couchdb:2.1
+docker container run --name couchdb1 -d -p 5984:5984 couchdb:3
 
 curl localhost:5984
 
-# {"couchdb":"Welcome","version":"2.1.2","features":["scheduler"],"vendor":{"name":"The Apache Software Foundation"}}
+# {"couchdb":"Welcome","version":"3.x.x","git_sha":"...","uuid":"...","features":["access-ready","partitioned","pluggable-storage-engines","reshard","scheduler"],"vendor":{"name":"The Apache Software Foundation"}}
 
 docker run -it --rm  busybox sh
 

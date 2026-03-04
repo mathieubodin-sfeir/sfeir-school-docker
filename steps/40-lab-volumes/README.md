@@ -8,11 +8,11 @@
 
 ### Existing volumes
 
-1. run `docker container run --name couchdb -d -p 5984:5984 couchdb:2.1`
+1. run `docker container run --name couchdb -d -p 5984:5984 couchdb:3`
 2. Check existing volumes
    1. Why there is already a volume ?
 3. Identify the volume that is used by `couchdb`
-4. Mount the identified volume to busybox 
+4. Mount the identified volume to busybox
 5. Check files inside `/opt/couchdb/data`
 6. Stop couchdb
 7. Delete the volume
@@ -21,12 +21,12 @@
 ### Create a named volume
 
 1. Create a volume named : `couchdb_vol`
-2. Run `couchedb` with the created volume
+2. Run `couchdb` with the created volume
 3. Inspect the container and look at `Mounts` that `couchdb_vol` is used
 
 ### Mount directory
 
-1. Mount `/var/lib/docker` from host to `/dck` into a busybox container 
+1. Mount `/var/lib/docker` from host to `/dck` into a busybox container
 2. Check at `ls /dck/volumes/couchdb_vol/_data` inside the container to verify that `couchdb_vol` is available
 
 ### SideCar Pattern
@@ -47,8 +47,7 @@
 7. Run `docker kill gen_date`
    1. Why is the container stoped ?
 
-### In memory 
+### In memory
 
 1. Run busybox with `--tmpfs /test`
-2. Check with `mount | grep test` that tmpfs is used 
-
+2. Check with `mount | grep test` that tmpfs is used
