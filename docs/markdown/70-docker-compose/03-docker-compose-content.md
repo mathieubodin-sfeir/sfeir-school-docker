@@ -5,22 +5,18 @@
 ## Service
 
 ```yaml
-version: "3.9" # Deprecated
 services:
-  frontend:
-    ...
-  backend:
-    ...
-  db:
-    ...
+  frontend: ...
+  backend: ...
+  db: ...
 ```
 
-* `services` refer to the container's configuration
+- `services` refer to the container's configuration
 
 Notes:
 
-Version is depracated but still present to maintain backwards compatibility
-It follow the [Docker Compose specification](https://docs.docker.com/compose/compose-file/)
+The `version` field is obsolete and ignored by Docker Compose V2+. It should be omitted from new files. Legacy files that still have it will work but may generate a warning.
+It follows the [Docker Compose specification](https://docs.docker.com/compose/compose-file/)
 
 Speaker **Mathieu**
 
@@ -37,7 +33,7 @@ services:
     ...
 ```
 
-* `image` refer to the container's image to use
+- `image` refer to the container's image to use
 <!-- .element: class="list-fragment" -->
 
 Notes:
@@ -57,7 +53,7 @@ services:
     ...
 ```
 
-* `image` can be replaced by **build** to use dockerfile
+- `image` can be replaced by **build** to use dockerfile
 <!-- .element: class="list-fragment" -->
 
 Notes:
@@ -78,7 +74,7 @@ services:
     ...
 ```
 
-* Both **image** and **build** to name the images build
+- Both **image** and **build** to name the images build
 <!-- .element: class="list-fragment" -->
 
 Notes:
@@ -96,7 +92,7 @@ services:
   network-example-service:
     image: busybox
     expose:
-      - "80" # PORT IS EXPOSED THROUGH THE DOCKERFILE
+      - '80' # PORT IS EXPOSED THROUGH THE DOCKERFILE
 ```
 
 ```yaml
@@ -104,16 +100,17 @@ services:
   network-example-service:
     image: busybox
     ports:
-      - "80:80" # PORT IS EXPOSED ON HOST 
+      - '80:80' # PORT IS EXPOSED ON HOST
 ```
 
-* Avoid collision on host
+- Avoid collision on host
 
 Notes:
 
 Speaker **Mathieu**
 
 ##--##
+
 <!-- .slide: class="with-code"-->
 
 # Docker compose
@@ -124,23 +121,24 @@ Speaker **Mathieu**
 services:
   network-example-service:
     image: busybox
-    networks: 
+    networks:
       - my-shared-network
     ...
   another-service-in-the-same-network:
     image: alpine:latest
-    networks: 
+    networks:
       - my-shared-network
     ...
   another-service-in-its-own-network:
     image: alpine:latest
-    networks: 
+    networks:
       - my-private-network
     ...
 networks:
   my-shared-network: {}
   my-private-network: {}
 ```
+
 <!-- .element: class="max-height" -->
 
 Notes:
@@ -148,6 +146,7 @@ Notes:
 Speaker **Mathieu**
 
 ##--##
+
 <!-- .slide: class="with-code"-->
 
 # Docker compose
@@ -158,7 +157,7 @@ Speaker **Mathieu**
 services:
   volumes-example-service:
     image: alpine:latest
-    volumes: 
+    volumes:
       - my-named-global-volume:/my-volumes/named-global-volume # RWO
       - /tmp:/my-volumes/host-volume # RWO - HOST
       - /home:/my-volumes/readonly-host-volume:ro # RO
@@ -169,9 +168,10 @@ services:
       - my-named-global-volume:/another-path/the-same-named-global-volume # RWO
     ...
 volumes:
-  my-named-global-volume: 
+  my-named-global-volume:
 
 ```
+
 <!-- .element: class="max-height" -->
 
 Notes:
@@ -179,6 +179,7 @@ Notes:
 Speaker **Mathieu**
 
 ##--##
+
 <!-- .slide: class="with-code"-->
 
 # Docker compose
@@ -196,6 +197,7 @@ services:
     image: bitnami/zookeeper
     ...
 ```
+
 <!-- .element: class="max-height" -->
 
 Notes:
@@ -205,6 +207,7 @@ No wait at all - if we want to wait utile load we should use `command` with cust
 Speaker **Mathieu**
 
 ##--##
+
 <!-- .slide: class="with-code"-->
 
 # Docker compose
@@ -213,27 +216,28 @@ Speaker **Mathieu**
 
 ```yaml
 services:
-  database: 
-    image: "postgres:${POSTGRES_VERSION}"
+  database:
+    image: 'postgres:${POSTGRES_VERSION}'
     environment:
       DB: mydb
-      USER: "${USER}"
+      USER: '${USER}'
 ```
+
 <!-- .element: class="max-height" -->
 
-* Using **.env** or **.properties** files (only work with `docker-compose up`) with `--env-file`
+- Using an **env file** (only work with `docker compose up`) with `--env-file`
 
-```.env
+```
 POSTGRES_VERSION=alpine
 USER=foo
 ```
 
-* Before running the command
+- Before running the command
 
 ```shell
 export POSTGRES_VERSION=alpine
 export USER=foo
-docker-compose up
+docker compose up
 ```
 
 Notes:
@@ -247,5 +251,37 @@ order :
 3. Environment file
 4. Dockerfile
 5. Variable not defined
+
+Speaker **Mathieu**
+
+##--##
+
+<!-- .slide: class="with-code"-->
+
+# Docker compose
+
+## Environment Variables — env_file
+
+```
+# env file (no extension needed)
+DB_PASSWORD=supersecret
+APP_ENV=production
+```
+
+```yaml
+# compose.yaml
+services:
+  app:
+    image: myapp
+    env_file:
+      - envfile
+```
+
+- File extension is **not required** — any filename works
+- `env_file` is the recommended approach to keep secrets out of the compose file
+
+Notes:
+
+The env_file key injects variables directly into the container environment (unlike --env-file which sets variables for compose itself). Multiple files can be listed. The `required` attribute (default: true) can be set to false to make the file optional.
 
 Speaker **Mathieu**

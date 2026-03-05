@@ -2,7 +2,7 @@
 
 docker pull registry.gitlab.com/gitlab-org/cloud-native/mirror/images/busybox
 
-docker pull registry.hub.docker.com/library/busybox
+docker pull docker.io/library/busybox
 
 docker pull busybox
 

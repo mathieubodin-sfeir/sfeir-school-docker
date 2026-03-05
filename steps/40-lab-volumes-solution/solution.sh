@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-docker container run --name couchdb -d -p 5984:5984 couchdb:2.1
+docker container run --name couchdb -d -p 5984:5984 \
+  -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password \
+  couchdb:3
 
 docker volume ls
 
@@ -38,7 +40,8 @@ docker volume ls
 docker volume create couchdb_vol
 
 docker container run  --name couchdb -d -p 5984:5984 \
-                      -v couchdb_vol:/opt/couchdb/data couchdb:2.1
+                      -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password \
+                      -v couchdb_vol:/opt/couchdb/data couchdb:3
 
 docker container inspect couchdb
 

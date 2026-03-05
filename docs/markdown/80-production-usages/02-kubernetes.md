@@ -4,10 +4,10 @@
 
 ## Container Orchestration
 
-* Deployment automation
-* Container management
-* Connectivity orchestration
-* Automatically scale up or down
+- Deployment automation
+- Container management
+- Connectivity orchestration
+- Automatically scale up or down
 <!-- .element: class="list-fragment" -->
 
 Notes:
@@ -20,11 +20,11 @@ Speaker **Alexandre**
 
 ## Orchestration Technologies
 
-* Docker Swarm
-* Windows Containers
-* Kubernetes
-* Mesos / Marathon
-* Nomad
+- Docker Swarm
+- Windows Containers
+- Kubernetes
+- Mesos / Marathon
+- Nomad
 <!-- .element: class="list-fragment" -->
 
 Notes:
@@ -37,12 +37,12 @@ Speaker **Alexandre**
 
 ## Why kubernetes?
 
-* Auto-scaling of infrastructure (vertical and horizontal scaling)
-* Automated Scheduling
-* Easy rollbacks of application
-* Self-healing
-* Highly available
-* Load balancing
+- Auto-scaling of infrastructure (vertical and horizontal scaling)
+- Automated Scheduling
+- Easy rollbacks of application
+- Self-healing
+- Highly available
+- Load balancing
 <!-- .element: class="list-fragment" -->
 
 Notes:
@@ -57,9 +57,9 @@ Speaker **Alexandre**
 
 ## Architecture basics
 
-* Composed of Nodes
-  * Master - handle kubernetes components
-  * Worker - handle containers/app
+- Composed of Nodes
+  - Master — handles Kubernetes components
+  - Worker — handles containers/apps
 
 Notes:
 
@@ -80,23 +80,25 @@ Notes:
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: class="with-code" -->
 
 # Kubernetes
 
 ## Architecture basics - worker nodes
 
-* deployment
-* replicaset
-* pods
-* services
-* and more
+- deployment
+- replicaset
+- pods
+- services
+- and more
 
 Notes:
 
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: class="with-code" -->
 
 # Kubernetes
@@ -107,11 +109,12 @@ Speaker **Alexandre**
 
 Notes:
 
-smaller resource that can exist
+smallest deployable unit in Kubernetes
 
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: class="with-code" -->
 
 # Kubernetes
@@ -124,14 +127,15 @@ Notes:
 
 Explain his role :
 
-* update pod
-* scale
-* self healing
-* ...
+- update pod
+- scale
+- self healing
+- ...
 
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: class="with-code" -->
 
 # Kubernetes
@@ -140,11 +144,11 @@ Speaker **Alexandre**
 
 > Infrastructure as Code (IaC) is the managing and provisioning of infrastructure through code instead of through manual processes.
 
-* Declarative approach
-* Increase in speed of deployments
-* Reduce errors
-* Improve infrastructure consistency
-* Eliminate configuration drift
+- Declarative approach
+- Increase in speed of deployments
+- Reduce errors
+- Improve infrastructure consistency
+- Eliminate configuration drift
 <!-- .element: class="list-fragment" -->
 
 Notes:
@@ -152,6 +156,7 @@ Notes:
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: class="with-code" -->
 
 # Kubernetes
@@ -159,19 +164,19 @@ Speaker **Alexandre**
 ## YAML - pods
 
 ```yaml
-apiVersion: v1 # API Version de la resource
-kind: Pod # Type de la resource : Pod
+apiVersion: v1 # API version of the resource
+kind: Pod # Resource type: Pod
 metadata:
-  name: my-app # Nom du Pod
+  name: my-app # Pod name
 spec:
   containers: # 2 containers
-  - name:  my-app
-    image: my-app
-  - name:  nginx-ssl
-    image: nginx
-    ports: # Nginx front end sur 2 ports
-    - containerPort: 80
-    - containerPort: 443
+    - name: my-app
+      image: my-app
+    - name: nginx-ssl
+      image: nginx
+      ports: # Nginx frontend on 2 ports
+        - containerPort: 80
+        - containerPort: 443
 ```
 
 Notes:
@@ -179,19 +184,21 @@ Notes:
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: class="with-code" -->
 
 # Kubernetes
 
 ## CLI - kubectl
 
-> `kubectl [commande] [TYPE] [NOM] [flags]`
+> `kubectl [command] [TYPE] [NAME] [flags]`
 
-* `kubectl get pods`
-* `kubectl get services`
-* And more
+- `kubectl get pods`
+- `kubectl get services`
+- And more
 
 [Cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
 <!-- .element: class="credits" -->
 
 Notes:
@@ -199,6 +206,7 @@ Notes:
 Speaker **Alexandre**
 
 ##--##
+
 <!-- .slide: class="with-code" -->
 
 # Kubernetes
@@ -207,20 +215,21 @@ Speaker **Alexandre**
 
 > [Play with kubernetes](https://labs.play-with-k8s.com/)
 
-* create 3 instances. 1 master, 2 worker
+- Create 3 instances: 1 master, 2 workers
 
 ```bash
 kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr 10.5.0.0/16
 
 kubectl apply -f https://raw.githubusercontent.com/cloudnativelabs/kube-router/master/daemonset/kubeadm-kuberouter.yaml
 
-kubectl get nodes 
+kubectl get nodes
 ```
 
 [Cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
 <!-- .element: class="credits" -->
 
 Notes:
 
-when nodes ready you should have a command to join cluster as node 
+when nodes ready you should have a command to join cluster as node
 Speaker **Alexandre**

@@ -1,8 +1,8 @@
 <!-- .slide: class="exercice" -->
 
-# Create a docker-compose file
+# Create a Compose file
 
-Create your first docker-compose-file using a python application that use flask and a redis.
+Create your first Compose file using a Python application that uses Flask and Redis.
 
 ### [Start](https://github.com/sfeir-open-source/sfeir-school-docker/tree/main/steps/60-lab-docker-compose)
 
